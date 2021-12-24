@@ -1,0 +1,16 @@
+﻿@model IEnumerable<ClassroomsInfo.Web.Models.ClassroomTableModel>
+
+@{
+    ViewBag.Title = "Selection";
+}
+
+<h2>Квартири</h2>
+
+<table class="table">
+    <thead>
+        @Html.Partial("_TableHead", @Model)
+    </thead>
+    <tbody>
+        @Html.Partial("_TableBody", @Model)
+    </tbody>
+</table>

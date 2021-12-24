@@ -1,0 +1,100 @@
+﻿@model ClassroomsInfo.Web.Models.ClassroomTableModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<script type="text/javascript">
+    function OnSuccess(data) {
+        var info = $('#info');
+        info.empty();
+        for (var i = 0; i < data.length; i++) {
+            info.append('<p>' + data[i] + '</p>');
+        }
+    }
+</script>
+
+
+<h2>Детальна інформація</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfessorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfessorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seats)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+    </dl>
+</div>
+<div>
+    <hr />
+    <div id="info">
+        @using (Ajax.BeginForm(
+            "JsonInfo",
+            new AjaxOptions
+            {
+                OnSuccess = "OnSuccess",
+                LoadingElementId = "loading",
+                LoadingElementDuration = 1000
+            }))
+        {
+            @Html.Hidden("id", @Model.Id)
+            <input type="submit" value="Опис" />
+        }
+    </div>
+    <div id="loading" class="load" style="display:none">
+        <p>Завантаження даних...</p>
+    </div>
+    <hr />
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", "ClassroomsCrud", new { id = Model.Id }, null) |
+    @Html.ActionLink("Back to List", "Selection")
+
+</p>
+

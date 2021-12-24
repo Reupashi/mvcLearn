@@ -1,0 +1,29 @@
+﻿
+@model IEnumerable<ClassroomsInfo.Entities.Classroom>
+
+@{
+    ViewBag.Title = "ClassroomsByProfessorNamesInfo";
+    Layout = "~/Views/Shared/_CategoryLayout.cshtml";
+}
+
+    <h2>Номер та Завідувач аудиторії </h2>
+
+
+@foreach (var m in @Model)
+{
+    <div class="row panel">
+        <div class="col-xs-12">
+            <h3>
+                <strong>@m.Number</strong>
+            </h3>
+            <strong class="lead">Імя професора: @m.ProfessorName</strong><br />
+            <strong class="lead">Тип аудиторії: @m.TypeName</strong><br />
+
+        </div>
+    </div>
+}
+
+@section NavMenu {
+    @Html.Action("ClassroomsByProfessorsNamesMenu", "Navigation",
+         new { categoryName = ViewBag.SelectedCategoryName })
+}

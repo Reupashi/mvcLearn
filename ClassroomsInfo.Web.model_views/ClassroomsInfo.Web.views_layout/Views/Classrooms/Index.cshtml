@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Головне меню навігації</h2>
+<hr />
+<h3>Представлення Аудиторій</h3>
+<p>@Html.ActionLink("Представлення списком із сортуванням", "Selection")</p>
+<p>@Html.ActionLink("Повна інформація", "BrowseByLetters")</p>
+<p>@Html.ActionLink("Коротка інформація", "ClassroomsByProfessorNamesInfo")</p>
+<hr />
+<h3>Редагування</h3>
+<p>@Html.ActionLink("Форма для редагування", "Index", "ClassroomsCrud")</p>

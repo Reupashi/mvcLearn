@@ -1,0 +1,31 @@
+﻿@*@model CountriesInfo.Domain.Country*@
+@model IEnumerable<ClassroomsInfo.Entities.Classroom>
+
+@{
+    //ViewBag.Title = "ObjectsInfo";
+    ViewBag.Title = "Аудиторії";
+}
+
+@*<h2>ObjectsInfo</h2>*@
+<h2>Аудиторії</h2>
+
+@foreach (var m in @Model)
+
+{
+    <div class="row panel">
+        <div class="col-xs-12">
+            <h3><strong>@m.TypeName</strong></h3>
+            <strong class="lead">Номер аудиторії: @m.Number</strong><br />
+            <strong class="lead">Тип: @m.Name</strong><br />
+            <strong class="lead">К-сть Місць (кв. м): @m.Seats </strong><br />
+
+            @if (!string.IsNullOrEmpty(m.Note))
+            {
+                <strong class="lead">Примітка:</strong><br />
+                @Html.Partial("_DescriptiveBlock", m.Note)
+            }
+        </div>
+    </div>
+    @Html.Action("_DescriptiveInfo", new { id = @m.Id })
+
+}

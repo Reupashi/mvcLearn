@@ -1,0 +1,16 @@
+﻿@model IEnumerable<ClassroomsInfo.Entities.Classroom>
+
+@{
+    ViewBag.Title = "Аудиторії";
+}
+
+<h2>InfoWithPaging</h2>
+
+@foreach (var m in @Model)
+{
+    <div class="row panel">
+        <div class="col-xs-12">
+            <h3><strong>@m.TypeName</strong></h3>
+        </div>
+    </div>
+}

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ClassroomsInfo.Web.Models.ClassroomTableModel>
+
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seats)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfessorName)
+        </td>
+        <td>
+            @Html.ActionLink("Детально", "_Details", new { id = item.Id })
+        </td>
+    </tr>
+}

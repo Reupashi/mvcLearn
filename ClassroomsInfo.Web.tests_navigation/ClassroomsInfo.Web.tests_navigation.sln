@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassroomsInfo.Web.tests_navigation", "ClassroomsInfo.Web.tests_navigation\ClassroomsInfo.Web.tests_navigation.csproj", "{0A57617D-DEA4-4C91-A3A3-14A692AD6603}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassroomsInfo.Web.tests_navigation.Tests", "ClassroomsInfo.Web.tests_navigation.Tests\ClassroomsInfo.Web.tests_navigation.Tests.csproj", "{640D1FC7-6E5A-49F9-925D-BD1AECEAA5B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A57617D-DEA4-4C91-A3A3-14A692AD6603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A57617D-DEA4-4C91-A3A3-14A692AD6603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A57617D-DEA4-4C91-A3A3-14A692AD6603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A57617D-DEA4-4C91-A3A3-14A692AD6603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{640D1FC7-6E5A-49F9-925D-BD1AECEAA5B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{640D1FC7-6E5A-49F9-925D-BD1AECEAA5B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{640D1FC7-6E5A-49F9-925D-BD1AECEAA5B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{640D1FC7-6E5A-49F9-925D-BD1AECEAA5B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCDA2550-989D-4761-ADE7-3118AE4333EB}
+	EndGlobalSection
+EndGlobal
